@@ -34,6 +34,14 @@ def get_fibo_recur_list(max_value):
     return result
 
 if __name__ == '__main__':
+    # Tests:
+    test_list = [0, 1, 1, 2, 3, 5, 8]
+    fibo_list = get_fibo_list(7)
+    fibo_list_recur = get_fibo_recur_list(4)
+    for i in range(0, len(fibo_list) - 1):
+        assert(fibo_list[i] == fibo_list_recur[i])
+        assert(fibo_list[i] == test_list[i])
+
     print("fibo list:")
     for fi in get_fibo_list(300):
         print(str(fi))
